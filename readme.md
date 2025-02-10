@@ -1,65 +1,48 @@
-Proyecto UT7 - Servicios y uso de APIs
+# 🌐 Proyecto SOAP y APIs
 
-Descripción
+## 📜 Descripción
+Este proyecto integra diversas tecnologías para consumir y ofrecer servicios web. Se incluyen:
+- 🛠️ **Servicios SOAP** para comunicación entre cliente y servidor.
+- ☁️ **API de AEMET** para obtener predicciones meteorológicas.
+- 📰 **Lector de noticias RSS** para mostrar noticias en tiempo real.
 
-Este proyecto implementa servicios SOAP, consume un canal RSS y utiliza la API de AEMET para mostrar información meteorológica.
+## ✨ Características
+✅ **Implementación de un servidor y cliente SOAP.**  
+✅ **Consumo de la API de AEMET con un sistema proxy.**  
+✅ **Sistema para mostrar noticias a través de un feed RSS.**  
+✅ **Estilos personalizados con CSS.**  
 
-Estructura del Proyecto
+## 🛠️ Requisitos
+- 🌍 **Servidor web** con soporte para PHP (Apache, Nginx, etc.).  
+- 🐘 **PHP 7.4 o superior con soporte para SOAP.**  
+- 🔗 **Conexión a internet para el consumo de APIs.**  
 
-Base de datos
+## 🚀 Instalación
+1️⃣ **Clona este repositorio** en tu máquina local:  
+   ```sh
+   git clone https://github.com/ivanvh7/Proyect3-soap-api.git
+   ```
+2️⃣ **Navega al directorio del proyecto**:  
+   ```sh
+   cd Proyect3-soap-api
+   ```
+3️⃣ **Configura el acceso a la API de AEMET** en `aemet_api/config.php`.  
+4️⃣ **Asegúrate de que PHP tenga habilitada la extensión SOAP.**  
+5️⃣ **Ejecuta el servidor local con PHP**:  
+   ```sh
+   php -S localhost:8000
+   ```
 
-fp.sql: Contiene la estructura de la base de datos y datos de prueba necesarios para el funcionamiento del proyecto. Debe importarse en MySQL antes de ejecutar los servicios.
+## 🌍 Uso del Proyecto
+### 🛠️ Servicio SOAP
+1️⃣ Accede a `soap_services/server.php` para activar el servidor.  
+2️⃣ Usa `soap_services/cliente.php` para realizar peticiones.  
 
-Servicios SOAP
+### 🌤️ API de AEMET
+1️⃣ Abre `aemet_api/predicción_meteorologica.html` en el navegador para ver las predicciones.  
 
-soap_services/server.php: Implementa los servicios SOAP definidos en el enunciado. Gestiona las solicitudes de información sobre módulos, departamentos y nomenclaturas.
+### 📰 Noticias RSS
+1️⃣ Accede a `rss_news/noticias.php` para visualizar las noticias actualizadas.  
 
-soap_services/cliente.php: Cliente que consume los servicios SOAP y muestra la información obtenida en una interfaz sencilla.
-
-soap_services/soap.css: Archivo de estilos para mejorar la presentación del cliente SOAP.
-
-Consumo de RSS
-
-rss_news/get_rss.php: Se encarga de obtener el feed RSS de EuropaPress, procesar la información y extraer los datos relevantes.
-
-rss_news/noticias.php: Página web que muestra las noticias obtenidas en una tabla, con enlaces a las fuentes originales.
-
-rss_news/noticias.css: Estilos CSS para la visualización de las noticias de forma ordenada y legible.
-
-Consumo de la API de AEMET
-
-aemet_api/config.php: Archivo de configuración donde se almacena la API Key de AEMET y otros parámetros de conexión.
-
-aemet_api/datos.js: Script JavaScript que realiza las peticiones a la API de AEMET y maneja la respuesta para mostrarla en la web.
-
-aemet_api/predicción_meteorologica.html: Página principal que muestra la información meteorológica mediante botones interactivos.
-
-aemet_api/proxy.php: Archivo utilizado para evitar problemas de CORS al realizar peticiones a la API de AEMET.
-
-aemet_api/aemet.css: Estilos CSS que mejoran la apariencia de la página de predicción meteorológica.
-
-Instalación y Configuración
-
-Base de datos:
-
-Importar fp.sql en MySQL.
-
-Configurar la conexión en los archivos PHP correspondientes.
-
-Servicios SOAP:
-
-Configurar y ejecutar server.php.
-
-Consumir los servicios desde cliente.php.
-
-RSS de EuropaPress:
-
-Ejecutar noticias.php para visualizar las noticias obtenidas del RSS.
-
-API de AEMET:
-
-Obtener una API Key de AEMET.
-
-Configurarla en config.php.
-
-Acceder a predicción_meteorologica.html para visualizar los datos.
+## ⚖️ Licencia
+Este proyecto está bajo la **licencia MIT**.
